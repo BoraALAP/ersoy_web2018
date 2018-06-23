@@ -1,0 +1,433 @@
+
+/**************************         
+IMPORT
+***************************/     
+@import "_imports.scss"; // media queries - if needed 
+
+                         
+/*-----------------------------------------------------------------------------------
+
+    0.  RESET & CLEARFIX
+    1.  BASICS (body, headers, links, etc)
+    2.  GENERAL ELEMENTS
+    3.  HOME PAGE
+    4.  PAINTING PAGE
+    5.  CONTACT PAGE
+    6.  NAVIGATION & MENU
+     
+-----------------------------------------------------------------------------------*/
+/*---------------------------------------------- 
+1.  BASICS (body, headers, links, etc)
+------------------------------------------------*/
+html{
+    @include scrollbars(0.5em, $black);  
+}
+
+body{
+    @include MQ(M){
+        overflow-y: hidden; 
+    }
+    margin:0;
+    padding:0;
+}
+
+/*---------------------------------------------- 
+3. HOME PAGE
+------------------------------------------------*/
+
+
+.enterence{ 
+    background: $black;
+    height:20vh;
+    width: 100vw;
+    position: fixed;
+    transition: all 2s $transition-load; 
+    z-index: 20;
+    @include MQ(M){
+        height:100vh;
+    }
+    .container{
+        @include MQ(M){
+            padding-left: 7vw;
+        }
+        height: 100vh;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        transition: all .5s $transition-load ; 
+    }
+    .name_title{
+        margin-top: 1.5vh;
+        opacity: 0;
+        @include MQ(M){
+            margin-top: 10vh;
+        }
+        transition: all .8s $transition-load 0.3s;
+        h1{
+            display: grid;
+            color:$white;
+            span{ 
+                transition: all .5s $transition-load; 
+                opacity: 1;
+                display: grid;
+     
+            }
+        }
+    }
+
+    .social_icons{
+        transition: all 0.7s $transition-load 3.2s;
+        transform: translate(0, 20px);
+        opacity: 0;
+        display: grid;
+        align-items: center;
+        margin-top: 5vh; 
+        a{
+            width: 40px; 
+            height: 40px;
+            display: inline-block;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 30px;
+            transition: box-shadow 0.5s $transition-load; 
+            &:hover{
+                box-shadow: inset 0px 0px 0px 1px #FFFFFF;  
+            }
+            &:first-child{
+                background-image:url('../img/facebook.svg'); 
+            }
+            &:nth-child(2){
+                background-image:url('../img/twitter.svg');
+            }
+            &:nth-child(3){
+                background-image:url('../img/instagram.svg');
+            } 
+            &:nth-child(4){
+                background-image:url('../img/linkedin.svg'); 
+            }
+        }
+    }
+
+
+    &.enterence_open{
+        .name_title{
+            opacity: 1;
+        }
+        @include MQ(M){
+            width: 35vw;
+        }  
+        nav{
+            opacity:1;
+            transform: translate(0,0);
+        }
+        .social_icons{
+            opacity: 1;
+            transform: translate(0,0); 
+        }
+    }
+    &.enterence_short{
+        height:10vh;
+        @include MQ(M){
+            width: 22.5vw;
+            height: 100vh;
+        }
+        .container{ 
+            @include MQ(M){
+                padding-left: 4vw;
+            }
+        }
+        .name_title{  
+            opacity: 1;
+            h1{
+                display: grid;
+                span{ 
+                       
+                    &:nth-child(2){
+                        transition: color 0.5s $transition-load 0.5s;
+                        padding-left: 0.7vw;
+                        @include MQ(M){
+                            color:$black;
+                        }
+                    }
+                }
+            }
+        }
+        .social_icons{
+            opacity: 1;       
+        }
+        nav{
+            opacity: 1;
+        }
+    }
+ }
+
+
+
+
+.white_overlay{
+    height: 100vh;
+    width: 15vw;
+    position: fixed; 
+    // background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+    z-index: 10;
+    right: 0;
+    & > div{
+        bottom: 5vh;
+        right: 3vw;
+        display:grid;
+        justify-content: end;
+        position: absolute;
+        z-index: 25;
+        p{
+            font:{
+                size:0.6em;
+            }
+        }
+    }
+    .svg{
+        opacity:0.25;
+        #line{
+
+        }
+        #triangle{
+            animation: animate 3s $transition-load;
+            animation-iteration-count: infinite;
+
+
+            @keyframes animate{
+                0%{
+                    transform: translate(0,0);
+                    opacity: 0;
+                }
+                30%{
+                    opacity: 1;
+                }
+                70%{
+                    opacity: 1;
+                }
+                100%{
+                    transform: translate(40px,0);
+                    opacity: 0; 
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+.page_container{
+    display: grid;
+    transition: all 2s $transition-load ;
+    transform: translate(100vw,0); 
+    grid-template-rows: auto;
+    grid-template-columns: auto 1fr;
+    &.enterence_short_img{
+        transform:translate(30vw,0);
+    }
+    &.img_load_animation{
+        transform: translate(45vw,0);
+    }
+    .img_container{
+        display: grid;
+        height: 100vh;
+        grid-template-rows: auto;
+        grid-template-columns: repeat(100, auto);
+
+
+
+
+        .img_box{
+            margin: 15vh 10vw 15vh 0;
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: auto auto;
+            justify-content: end;
+            
+            .detail_box{
+                min-width: 35%;
+                display: grid;
+                margin: 1vh 0;
+                p{
+                    color: $black;
+                    text-align: right;
+                }
+            }
+            .img{
+                width: auto;
+                height: 60vh;
+                display: grid;
+                align-self: end;
+                box-shadow: 4px 4px 20px rgba($black, 0.3)
+            }
+        }
+    }
+
+    .description{
+        display: grid;
+        grid-template-rows: auto minmax(auto, 70vh);
+        grid-template-columns: repeat(2, minmax(70vw, 100vw));
+        padding: 8vh 10vw 10vh 0;
+        grid-gap: 2.5vw;
+        p{
+            margin-bottom:2.5vh;
+        }
+
+        .title{
+            grid-column-start:1;
+            grid-column-end:3;
+        }
+        
+    }
+}
+
+
+#painting_page{
+
+}
+
+
+
+/*---------------------------------------------- 
+5. CONCTACT PAGE
+------------------------------------------------*/
+
+
+
+#contact_about{
+    overflow: auto;
+    overflow-x: hidden;
+    .enterence_open{
+        @include MQ(M){
+                width: 25vw;
+        }    
+    }
+    
+    .contact_about_section{
+        display: grid;
+        margin: 10vh;
+        transition-delay: 0.5s; 
+        margin: 10vh 5vw;
+        align-content:center;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr;
+        grid-gap:2.5vw;
+        @include MQ(L){
+            
+        }
+        .section{
+            display: grid;
+            z-index: 15;
+        }
+        .about_section{
+            p{
+                margin-bottom:10px;
+            }
+        }
+        .contact_section{
+            .divider{
+                border-top: 2px solid #000;
+                margin:6vh 0 3vh; 
+                width: 100%;
+            }
+            .form_button{
+                margin-right: 2vw;
+            }
+            .extra_information{
+                width: 100%;
+                .information_containers{
+                    margin-top: 3vh;
+        
+                    display: grid;
+                    .extra_title{
+                        width: 40%;
+                    }
+                    .extra_text{
+                        width: 60%;
+                        float:left;
+                    }
+                }
+            }   
+        }
+    }
+    .page_container{
+
+        &.img_load_animation{
+            width: 75vw;
+            transform: translate(25vw,0);
+        }
+
+
+    }
+}
+
+.testdiv{
+    height: 100vh;
+    width: 300vw;
+}
+
+
+/*---------------------------------------------- 
+5. NAVIGATION
+------------------------------------------------*/
+
+
+.navigation{
+        display: grid;
+        justify-content: start;
+        margin-bottom: 10vh;
+        align-items: end;
+        nav{
+            opacity:0;
+            margin-left: -1vw;
+            transition: all 0.7s $transition-load 0.5s;
+            ul{
+                padding-left:0;
+                list-style: none;
+                display: grid;
+                
+
+                li{
+                    text-align: left;
+                    padding: 2vh 1vw;
+                    span{
+                        opacity: 1;
+                        transition:all 0.6s $transition-load;
+                        border-top: 2px solid $white;  
+                        display: grid;
+                        margin-top: -0.5em;
+                        width: 0%;
+                    }
+                    &:hover{
+                         &:first-child{
+                            span{
+                                width:115px;
+                            }
+                        }
+                        &:nth-child(2){
+                            span{
+                                width:90px;
+                            }
+                        }
+                        &:nth-child(3){
+                            span{
+                                width:130px;
+                            }
+                        }
+                        span{
+                            opacity:1;
+                            width: 100%;
+                            margin-left: -1em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
