@@ -40,11 +40,12 @@ body{
     background: $black;
     height:100vh;
     width: 100vw;
-    position: fixed;
+    
     transition: all 2s $transition-load; 
     z-index: 20;
     @include MQ(M){
         height:100vh;
+        position: fixed;
     }
     .container{
         display: grid;
@@ -116,7 +117,7 @@ body{
 
     &.enterence_open{
         height:30vh;
-        
+        min-height:200px;
         @include MQ(M){
             width: 35vw;
             height:100vh;
@@ -257,13 +258,13 @@ body{
     }
 
     &.enterence_short_img{
-        transform: translate(0vw,10vh);
+        transform: translate(0vw,0vh);
         @include MQ(M){
             transform: translate(30vw,0);
         }
     }
     &.img_load_animation{
-        transform: translate(0vw,30vh);
+        transform: translate(0vw,0vh);
         @include MQ(M){
             transform: translate(45vw,0);
         }
