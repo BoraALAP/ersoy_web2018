@@ -38,7 +38,7 @@ body{
 
 .enterence{ 
     background: $black;
-    height:20vh;
+    height:100vh;
     width: 100vw;
     position: fixed;
     transition: all 2s $transition-load; 
@@ -47,20 +47,25 @@ body{
         height:100vh;
     }
     .container{
+        display: grid;
+        transition: all .5s $transition-load ; 
+        height: 30vh;
+        margin-left: 2vw;
         @include MQ(M){
             padding-left: 7vw;
+            height: 100vh;
+            grid-template-columns: auto;
+            grid-template-rows: auto auto;
         }
-        height: 100vh;
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto auto;
-        transition: all .5s $transition-load ; 
+        
     }
     .name_title{
         margin-top: 1.5vh;
         opacity: 0;
+        
         @include MQ(M){
             margin-top: 10vh;
+            margin-left: 0;
         }
         transition: all .8s $transition-load 0.3s;
         h1{
@@ -110,12 +115,25 @@ body{
 
 
     &.enterence_open{
-        .name_title{
-            opacity: 1;
-        }
+        height:30vh;
+        
         @include MQ(M){
             width: 35vw;
-        }  
+            height:100vh;
+
+        } 
+
+        .container{
+            margin-left: 5vw;
+            @include MQ(M){
+                margin-left: 0vw;
+            }
+        }
+        .name_title{
+            opacity: 1;
+            
+        }
+         
         nav{
             opacity:1;
             transform: translate(0,0);
@@ -165,12 +183,19 @@ body{
 
 
 .white_overlay{
+    display:none;
     height: 100vh;
-    width: 15vw;
+    width: 100vw;
     position: fixed; 
     // background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
     z-index: 10;
     right: 0;
+
+    @include MQ(M){
+        height: 100vh;
+        width: 15vw;
+        display: grid;
+    }
     & > div{
         bottom: 5vh;
         right: 3vw;
@@ -221,31 +246,53 @@ body{
 .page_container{
     display: grid;
     transition: all 2s $transition-load ;
-    transform: translate(100vw,0); 
-    grid-template-rows: auto;
-    grid-template-columns: auto 1fr;
+    transform: translate(0vw,100vh); 
+    grid-template-columns: auto;
+    grid-template-rows: auto 1fr;
+
+    @include MQ(M){
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        transform: translate(100vw,0); 
+    }
+
     &.enterence_short_img{
-        transform:translate(30vw,0);
+        transform: translate(0vw,10vh);
+        @include MQ(M){
+            transform: translate(30vw,0);
+        }
     }
     &.img_load_animation{
-        transform: translate(45vw,0);
+        transform: translate(0vw,30vh);
+        @include MQ(M){
+            transform: translate(45vw,0);
+        }
     }
     .img_container{
         display: grid;
-        height: 100vh;
-        grid-template-rows: auto;
-        grid-template-columns: repeat(100, auto);
+        width:100vw;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(100, auto);
+
+        @include MQ(M){
+            height: 100vh;
+            width:auto;
+            grid-template-rows: auto;
+            grid-template-columns: repeat(100, auto);
+        }
 
 
 
 
         .img_box{
-            margin: 15vh 10vw 15vh 0;
             display: grid;
             grid-template-columns: auto;
             grid-template-rows: auto auto;
             justify-content: end;
-            
+            margin: 5vh 5vw 5vh 5vw;
+            @include MQ(M){
+                margin: 15vh 10vw 15vh 0;
+            }
             .detail_box{
                 min-width: 35%;
                 display: grid;
@@ -256,28 +303,41 @@ body{
                 }
             }
             .img{
-                width: auto;
-                height: 60vh;
                 display: grid;
+                box-shadow: 4px 4px 20px rgba($black, 0.3);
+                width: 90vw;
+                height: auto;
                 align-self: end;
-                box-shadow: 4px 4px 20px rgba($black, 0.3)
+                @include MQ(M){
+                    width: auto;
+                    height: 60vh;
+                }
             }
         }
     }
 
     .description{
         display: grid;
-        grid-template-rows: auto minmax(auto, 70vh);
-        grid-template-columns: repeat(2, minmax(70vw, 100vw));
-        padding: 8vh 10vw 10vh 0;
-        grid-gap: 2.5vw;
+        grid-template-rows: auto auto;
+        grid-template-columns: 90vw;
+        padding:5vh 5vw;
+
+        @include MQ(M){
+            grid-template-rows: auto minmax(auto, 70vh);
+            grid-template-columns: repeat(2, minmax(70vw, 100vw));
+            padding: 8vh 10vw 10vh 0;
+            grid-gap: 2.5vw;
+        }
         p{
             margin-bottom:2.5vh;
         }
 
         .title{
-            grid-column-start:1;
-            grid-column-end:3;
+            margin-bottom:2.5vh;
+            @include MQ(M){
+                grid-column-start:1;
+                grid-column-end:3;
+            }
         }
         
     }
@@ -379,6 +439,7 @@ body{
         justify-content: start;
         margin-bottom: 10vh;
         align-items: end;
+
         nav{
             opacity:0;
             margin-left: -1vw;
