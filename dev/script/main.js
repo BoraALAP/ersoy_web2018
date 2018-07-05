@@ -1,11 +1,11 @@
 const app = {}
 
-app.imageCreater = (classes = "img_box",url,description) => {
+app.imageCreater = (classes = "img_box",url,description, alt_des) => {
     const $img_container = $(".img_container");
 
     let markup = `
         <div class="${classes}">
-            <img class="img" src="assets/img/${url}.jpg"/>
+            <img class="img" alt="${alt_des}" src="assets/img/${url}.JPG"/>
             <div class="detail_box"><p>${description}</p></div>
         </div> `
 
@@ -55,6 +55,14 @@ app.events = () => {
             
             $('html, body').animate({scrollLeft: 0}, 1000);
             return false;
+        }
+    });
+
+    $("#description-btn").click(function() {
+        if (screen.width >= 768) {
+            $('html, body').animate({scrollLeft: $("#description").offset().left}, 2500);
+        } else {
+            $('html, body').animate({scrollTop: $("#description").offset().top}, 2500);
         }
     });
 

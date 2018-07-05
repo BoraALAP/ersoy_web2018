@@ -37,26 +37,25 @@ body{
 
 
 .enterence{ 
-    background: $black;
+    background: $white;
     height:100vh;
     width: 100vw;
-    
+    position: fixed;
     transition: all 2s $transition-load; 
     z-index: 20;
     @include MQ(M){
         height:100vh;
-        position: fixed;
+        
     }
     .container{
         display: grid;
         transition: all .5s $transition-load ; 
-        height: 30vh;
-        margin-left: 2vw;
         @include MQ(M){
-            padding-left: 7vw;
+            text-align:right;
             height: 100vh;
             grid-template-columns: auto;
             grid-template-rows: auto auto;
+            justify-items:end;
         }
         
     }
@@ -65,13 +64,13 @@ body{
         opacity: 0;
         
         @include MQ(M){
-            margin-top: 10vh;
-            margin-left: 0;
+            margin-top: 8vh;
+            padding-right: 10px;
         }
         transition: all .8s $transition-load 0.3s;
         h1{
             display: grid;
-            color:$white;
+            color:$black;
             span{ 
                 transition: all .5s $transition-load; 
                 opacity: 1;
@@ -116,10 +115,10 @@ body{
 
 
     &.enterence_open{
-        height:30vh;
-        min-height:200px;
+        
+        height:132px;
         @include MQ(M){
-            width: 35vw;
+            width: 25vw;
             height:100vh;
 
         } 
@@ -147,12 +146,14 @@ body{
     &.enterence_short{
         height:10vh;
         @include MQ(M){
-            width: 22.5vw;
+            width: 160px;
             height: 100vh;
+            
+            
         }
         .container{ 
             @include MQ(M){
-                padding-left: 4vw;
+                
             }
         }
         .name_title{  
@@ -264,9 +265,9 @@ body{
         }
     }
     &.img_load_animation{
-        transform: translate(0vw,0vh);
+        transform: translate(0vw,140px);
         @include MQ(M){
-            transform: translate(45vw,0);
+            transform: translate(35vw,0);
         }
     }
     .img_container{
@@ -321,12 +322,12 @@ body{
         display: grid;
         grid-template-rows: auto auto;
         grid-template-columns: 90vw;
-        padding:5vh 5vw;
+        padding:150px 5vw 40px;
 
         @include MQ(M){
             grid-template-rows: auto minmax(auto, 70vh);
             grid-template-columns: repeat(2, minmax(70vw, 100vw));
-            padding: 8vh 10vw 10vh 0;
+            padding: 8vh 10vw 10vh 200px;
             grid-gap: 2.5vw;
         }
         p{
@@ -437,13 +438,15 @@ body{
 
 .navigation{
         display: grid;
-        justify-content: start;
-        margin-bottom: 10vh;
-        align-items: end;
+
+        @include MQ(M){
+            justify-content: start;
+            margin-bottom: 10vh;
+            align-items: end;
+        }
 
         nav{
             opacity:0;
-            margin-left: -1vw;
             transition: all 0.7s $transition-load 0.5s;
             ul{
                 padding-left:0;
@@ -452,8 +455,12 @@ body{
                 
 
                 li{
-                    text-align: left;
-                    padding: 2vh 1vw;
+                    padding: 10px 1vw;
+                    @include MQ(M){
+                        text-align: right;
+                        padding: 2vh 1vw;
+                    }
+
                     span{
                         opacity: 1;
                         transition:all 0.6s $transition-load;
