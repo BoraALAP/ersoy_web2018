@@ -34,7 +34,12 @@ body{
 /*---------------------------------------------- 
 3. HOME PAGE
 ------------------------------------------------*/
-
+#body{
+    max-width: 100%;
+ overflow: scroll;
+ width: 100%;
+ display: block;
+}
 
 .enterence{ 
     background: $white;

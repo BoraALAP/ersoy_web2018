@@ -101,26 +101,19 @@ app.init = () => {
     app.getJSON();
     app.hittingLeft();
 
-///////// Horizontal Scrolling  
-    let controller = new ScrollMagic.Controller({vertical:false});
+/////// Horizontal Scrolling  
+    var controller = new ScrollMagic.Controller({vertical:false});
+/////// Horizontal Scrolling End
 
-    // init ScrollMagic Controller
-    
-    // var scene = new ScrollMagic.Scene({
-    //   triggerElement: '#end'
-    // })
-    //  // Add Scene to ScrollMagic Controller
-    // .on("mouseover mouseout", function() {
-    //     console.log("boom");
-    // })
-    // .addTo(controller);
 
-    
 
-    // controller.addScene([
-    //   scene
-    // ]);
-///////// Horizontal Scrolling End
+    // $('#body').mousewheel(function(e, delta) {
+
+    //     $('#body').scrollLeft -= (delta * 40);
+    //     e.preventDefault();
+    // });    
+
+
     
     
 }
