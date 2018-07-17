@@ -36,20 +36,19 @@ body{
 ------------------------------------------------*/
 #body{
     max-width: 100%;
- overflow: scroll;
+ // overflow: scroll;
  width: 100%;
  display: block;
 }
 
 .enterence{ 
     background: $white;
-    height:100vh;
     width: 100vw;
-    position: fixed;
     transition: all 2s $transition-load; 
     z-index: 20;
     @include MQ(M){
         height:100vh;
+        position: fixed;
         
     }
     .container{
@@ -121,7 +120,7 @@ body{
 
     &.enterence_open{
         
-        height:132px;
+        
         @include MQ(M){
             width: 25vw;
             height:100vh;
@@ -270,7 +269,7 @@ body{
         }
     }
     &.img_load_animation{
-        transform: translate(0vw,140px);
+        transform: translate(0vw,0px);
         @include MQ(M){
             transform: translate(35vw,0);
         }

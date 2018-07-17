@@ -2937,7 +2937,9 @@
 })({ 1: [function (require, module, exports) {
         const app = {};
 
-        app.imageCreater = (classes = "img_box", url, description, alt_des) => {
+        app.result = [];
+
+        app.imageCreater = (classes = "img_box", url, description, alt_des, collection = "moon") => {
             const $img_container = $(".img_container");
 
             let markup = `
@@ -2949,11 +2951,12 @@
             $img_container.append(markup);
         };
 
-        app.imageRunner = res => {
-            // console.log(res)
-            for (let i = 0; i < res.length; i++) {
-                app.imageCreater(res[i].classes, res[i].url, res[i].description);
-            }
+        app.imageRunner = (res, collection = "moon") => {
+            res.forEach(painting => {
+                if (painting.collection === collection) {
+                    app.imageCreater(painting.classes, painting.url, painting.description);
+                }
+            });
         };
 
         app.getJSON = () => {
@@ -2961,17 +2964,33 @@
                 url: "./public/js/painting_list.json",
                 dataType: "json",
                 success: function (res) {
-                    app.imageRunner(res.paintings);
+                    app.result = [...res.paintings];
+                    app.imageRunner(app.result);
                 }
             });
         };
 
+        app.displayCollection = () => {
+            console.log(this);
+        };
+
         app.events = () => {
+
+            const $header = $(".enterence");
+            const $page_container = $(".page_container");
+            const $img_container = $(".img_container");
+            const nav = document.querySelectorAll(".navigation button");
+            // const buttons = nav.
             ///////// Activating Animation on scroll
 
-            $(window).scroll(function () {
-                const $header = $(".enterence");
-                const $page_container = $(".page_container");
+            nav.forEach(button => {
+                button.addEventListener("click", function () {
+                    $img_container.empty();
+                    app.imageRunner(app.result, this.dataset.collection);
+                });
+            });
+
+            $(window).scroll(function (e) {
                 const scroll = $(window).scrollLeft();
                 if (scroll >= 20) {
                     $header.removeClass('enterence_open').addClass("enterence_short");
@@ -2984,12 +3003,21 @@
                     // $("#triangle").css("animation-play-state", "running");
                     // $('.svg').prop('disabled', false); 
                 }
+
+                if ($(window).scrollLeft() + $(window).width() >= $(document).width() - 500) {
+                    $("#info p em").text("back to beginning");
+                    $("#info svg").attr('transform', 'rotate(180)');
+                    $('.svg').prop('disabled', false);
+                } else {
+                    $("#info p em").text("scroll horizontally");
+                    $("#info svg").attr('transform', 'rotate(0)');
+                    $('.svg').prop('disabled', true);
+                }
             });
             ///////// Activating Animation on scroll End
 
             $("#info svg").click(function () {
                 if ($(window).scrollLeft() + $(window).width() >= $(document).width() - 500) {
-
                     $('html, body').animate({ scrollLeft: 0 }, 1000);
                     return false;
                 }
@@ -3000,22 +3028,6 @@
                     $('html, body').animate({ scrollLeft: $("#description").offset().left }, 2500);
                 } else {
                     $('html, body').animate({ scrollTop: $("#description").offset().top }, 2500);
-                }
-            });
-        };
-
-        app.hittingLeft = () => {
-            $(window).scroll(function () {
-                if ($(window).scrollLeft() + $(window).width() >= $(document).width() - 500) {
-
-                    $("#info p em").text("back to beginning");
-                    $("#info svg").attr('transform', 'rotate(180)');
-
-                    $('.svg').prop('disabled', false);
-                } else {
-                    $("#info p em").text("scroll horizontally");
-                    $("#info svg").attr('transform', 'rotate(0)');
-                    $('.svg').prop('disabled', true);
                 }
             });
         };
@@ -3031,19 +3043,15 @@
             ///////// Page Load Animation End
 
             app.getJSON();
-            app.hittingLeft();
 
             /////// Horizontal Scrolling  
             var controller = new ScrollMagic.Controller({ vertical: false });
             /////// Horizontal Scrolling End
 
-
-            // $('#body').mousewheel(function(e, delta) {
-
-            //     $('#body').scrollLeft -= (delta * 40);
-            //     e.preventDefault();
-            // });    
-
+            $(window).scroll(function (e, delta) {
+                $(window).scrollLeft -= delta * 40;
+                e.preventDefault();
+            });
         };
 
         $(function () {
