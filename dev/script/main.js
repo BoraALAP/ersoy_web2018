@@ -42,21 +42,29 @@ app.events = () => {
     const $header = $(".enterence");
     const $page_container = $(".page_container");
     const $img_container = $(".img_container");
+    
+    
     const nav = document.querySelectorAll(".navigation button");
     // const buttons = nav.
 ///////// Activating Animation on scroll
     
+    const img_boxes = document.querySelectorAll(".img_box");
+    function listenTransition(collectionName){
+        $img_container.empty();
+        app.imageRunner(app.result, collectionName);
+    }
+
+
     nav.forEach((button) => {
         button.addEventListener("click", function(){
-            $img_container.empty();
             $('html, body').animate({scrollLeft: 0}, 600);
-            if(window.location.pathname === "/about.html"){
-                app.imageRunner(app.result, this.dataset.collection);
-                window.location.href = "/";
-            } else {
-                app.imageRunner(app.result, this.dataset.collection);
-                
-            }
+            const data = this.dataset.collection;
+            listenTransition(data);
+            
+            // if(window.location.pathname === "/about.html"){
+            //     window.location.href = "/";
+            // } else {
+            // }
 
         })
     })

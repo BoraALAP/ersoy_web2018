@@ -264,6 +264,8 @@ body{
             justify-content: end;
             align-content: start;
             margin: 5vh 5vw 5vh 5vw;
+            opacity:1;
+            transition:0.3s all ease; 
             @include MQ(M){
                 margin: 15vh 10vw 15vh 0;
             }
@@ -287,6 +289,10 @@ body{
                     height: 60vh;
                 }
             }
+            &.animate{
+                opacity:0;
+            }
+
         }
     }
 
