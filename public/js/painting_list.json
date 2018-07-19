@@ -2,185 +2,171 @@
 	"paintings": [ 
 		{ 
 			
-			"url":"IMG_7250",
-			"description": "Fullmoon No:01 / 2017 / Acrylic On Canvas / 177x146 cm",
-			"alt_des": "Ersoy ALAP Fullmoon 1 Acrylic On Canvas / 177x146 cm",
-			"collection": "moon"
+			"url": "expression_no1",
+			"description": "Expression N0:01 / 2018 / Acrylic On Canvas / 88,5 x 79 cm",
+			"alt_des": "Expression N0:01 / 2018 / Acrylic On Canvas / 88,5 x 79 cm",
+			"collection": "expression"
 		},
 		{ 
 			
-			"url":"IMG_7251",
-			"description": "Fullmoon No:04 / 2017 / Acrylic On Canvas / 177x146 cm",
-			"alt_des": "Ersoy ALAP Fullmoon 4 Acrylic On Canvas / 177x146 cm",
-			"collection": "moon"
+			"url": "expression_no2",
+			"description": "Expression N0:02 / 2018 / Acrylic On Canvas / 78 x 65 cm",
+			"alt_des": "Expression N0:02 / 2018 / Acrylic On Canvas / 78 x 65 cm",
+			"collection": "expression"
 		},
 		{ 
 			
-			"url":"IMG_7252",
-			"description": "Fullmoon No:03 / 2017 / Acrylic On Canvas / 139x107 cm",
-			"alt_des": "Ersoy ALAP Fullmoon 3 Acrylic On Canvas / 139x107 cm",
-			"collection": "moon"
+			"url": "expression_no3",
+			"description": "Expression N0:03 / 2018 / Acrylic On Canvas / 99 x 82 cm",
+			"alt_des": "Expression N0:03 / 2018 / Acrylic On Canvas / 99 x 82 cm",
+			"collection": "expression"
 		},
 		{ 
 			
-			"url":"IMG_7253",
-			"description": "Fullmoon No:14 / 2017 / Acrylic On Canvas / 121x100 cm",
-			"alt_des": "Ersoy ALAP Fullmoon 14 Acrylic On Canvas / 121x100 cm",
-			"collection": "moon"
+			"url": "expression_no4",
+			"description": "Expression N0:08 / 2018 / Acrylic On Canvas / 102 x89 cm",
+			"alt_des": "Expression N0:08 / 2018 / Acrylic On Canvas / 102 x89 cm",
+			"collection": "expression"
 		},
 		{ 
 			
-			"url":"IMG_7262",
-			"description": "Fullmoon No:01 / 2017 / Acrylic On Canvas / 177x146 cm",
-			"alt_des": "Ersoy ALAP Fullmoon 1 Acrylic On Canvas / 177x146 cm",
-			"collection": "moon"
+			"url": "expression_no5",
+			"description": "Expression N0:09 / 2018 / Acrylic On Canvas / 108,5 x90,5 cm",
+			"alt_des": "Expression N0:09 / 2018 / Acrylic On Canvas / 108,5 x90,5 cm",
+			"collection": "expression"
 		},
 		{ 
 			
-			"url":"IMG_7263",
-			"description": "Fullmoon No:04 / 2017 / Acrylic On Canvas / 177x146 cm",
-			"alt_des": "Ersoy ALAP Fullmoon 4 Acrylic On Canvas / 177x146 cm",
-			"collection": "moon"
+			"url": "expression_no6",
+			"description": "Expression N0:04 / 2018 / Acrylic On Canvas / 93,5 x 81,5cm",
+			"alt_des": "Expression N0:04 / 2018 / Acrylic On Canvas / 93,5 x 81,5cm",
+			"collection": "expression"
 		},
 		{ 
 			
-			"url":"IMG_7264",
-			"description": "Fullmoon No:03 / 2017 / Acrylic On Canvas / 139x107 cm",
-			"alt_des": "Ersoy ALAP Fullmoon 3 Acrylic On Canvas / 139x107 cm",
-			"collection": "sun"
+			"url": "expression_no7",
+			"description": "Expression N0:05 / 2018 / Acrylic On Canvas / 87 x 74 cm",
+			"alt_des": "Expression N0:05 / 2018 / Acrylic On Canvas / 87 x 74 cm",
+			"collection": "expression"
 		},
 		{ 
 			
-			"url":"IMG_7265",
-			"description": "Fullmoon No:14 / 2017 / Acrylic On Canvas / 121x100 cm",
-			"alt_des": "Ersoy ALAP Fullmoon 14 Acrylic On Canvas / 121x100 cm",
-			"collection": "sun"
+			"url": "expression_no8",
+			"description": "Expression N0:06 / 2018 / Acrylic On Canvas / 93 x 80 cm",
+			"alt_des": "Expression N0:06 / 2018 / Acrylic On Canvas / 93 x 80 cm",
+			"collection": "expression"
 		},
 		{ 
 			
-			"url":"IMG_7266",
-			"description": "Fullmoon No:01 / 2017 / Acrylic On Canvas / 177x146 cm",
-			"alt_des": "Ersoy ALAP Fullmoon 1 Acrylic On Canvas / 177x146 cm",
-			"collection": "sun"
+			"url": "expression_no9",
+			"description": "Expression N0:07 / 2018 / Acrylic On Canvas / 91 x 77 cm",
+			"alt_des": "Expression N0:07 / 2018 / Acrylic On Canvas / 91 x 77 cm",
+			"collection": "expression"
 		},
 		{ 
 			
-			"url":"IMG_7269",
-			"description": "Fullmoon No:04 / 2017 / Acrylic On Canvas / 177x146 cm",
-			"alt_des": "Ersoy ALAP Fullmoon 4 Acrylic On Canvas / 177x146 cm",
-			"collection": "sun"
+			"url": "expression_no10",
+			"description": "Expression N0:10 / 2018 / Acrylic On Canvas / 109 x93 cm",
+			"alt_des": "Expression N0:10 / 2018 / Acrylic On Canvas / 109 x93 cm",
+			"collection": "expression"
 		},
 		{ 
 			
-			"url":"IMG_7270",
-			"description": "Fullmoon No:03 / 2017 / Acrylic On Canvas / 139x107 cm",
-			"alt_des": "Ersoy ALAP Fullmoon 3 Acrylic On Canvas / 139x107 cm",
-			"collection": "sun"
+			"url": "fullmoon_no1",
+			"description": "",
+			"alt_des": "",
+			"collection": "fullmoon"
 		},
 		{ 
 			
-			"url":"IMG_7272",
-			"description": "Fullmoon No:14 / 2017 / Acrylic On Canvas / 121x100 cm",
-			"alt_des": "Ersoy ALAP Fullmoon 14 Acrylic On Canvas / 121x100 cm",
-			"collection": "star"
+			"url": "fullmoon_no2",
+			"description": "",
+			"alt_des": "",
+			"collection": "fullmoon"
 		},
 		{ 
 			
-			"url":"IMG_7273",
-			"description": "Fullmoon No:01 / 2017 / Acrylic On Canvas / 177x146 cm",
-			"alt_des": "Ersoy ALAP Fullmoon 1 Acrylic On Canvas / 177x146 cm",
-			"collection": "star"
+			"url": "fullmoon_no3",
+			"description": "",
+			"alt_des": "",
+			"collection": "fullmoon"
 		},
 		{ 
 			
-			"url":"IMG_7274",
-			"description": "Fullmoon No:04 / 2017 / Acrylic On Canvas / 177x146 cm",
-			"alt_des": "Ersoy ALAP Fullmoon 4 Acrylic On Canvas / 177x146 cm",
-			"collection": "star"
+			"url": "fullmoon_no4",
+			"description": "Fulmoon N0:10 / 2018 / Acrylic On Canvas / 109x91 cm",
+			"alt_des": "Fulmoon N0:10 / 2018 / Acrylic On Canvas / 109x91 cm",
+			"collection": "fullmoon"
 		},
 		{ 
 			
-			"url":"IMG_7275",
-			"description": "Fullmoon No:03 / 2017 / Acrylic On Canvas / 139x107 cm",
-			"alt_des": "Ersoy ALAP Fullmoon 3 Acrylic On Canvas / 139x107 cm",
-			"collection": "star"
+			"url": "fullmoon_no5",
+			"description": "",
+			"alt_des": "",
+			"collection": "fullmoon"
 		},
 		{ 
 			
-			"url":"IMG_7276",
-			"description": "Fullmoon No:14 / 2017 / Acrylic On Canvas / 121x100 cm",
-			"alt_des": "Ersoy ALAP Fullmoon 14 Acrylic On Canvas / 121x100 cm",
-			"collection": "star"
+			"url": "fullmoon_no6",
+			"description": "",
+			"alt_des": "",
+			"collection": "fullmoon"
 		},
 		{ 
 			
-			"url":"IMG_7277",
-			"description": "Fullmoon No:01 / 2017 / Acrylic On Canvas / 177x146 cm",
-			"alt_des": "Ersoy ALAP Fullmoon 1 Acrylic On Canvas / 177x146 cm",
-			"collection": "star"
+			"url": "fullmoon_no7",
+			"description": "84x74,5 cm",
+			"alt_des": "84x74,5 cm",
+			"collection": "fullmoon"
 		},
 		{ 
 			
-			"url":"IMG_7278",
-			"description": "Fullmoon No:04 / 2017 / Acrylic On Canvas / 177x146 cm",
-			"alt_des": "Ersoy ALAP Fullmoon 4 Acrylic On Canvas / 177x146 cm",
-			"collection": "star"
+			"url": "fullmoon_no8",
+			"description": "",
+			"alt_des": "",
+			"collection": "fullmoon"
 		},
 		{ 
 			
-			"url":"IMG_7279",
-			"description": "Fullmoon No:03 / 2017 / Acrylic On Canvas / 139x107 cm",
-			"alt_des": "Ersoy ALAP Fullmoon 3 Acrylic On Canvas / 139x107 cm",
-			"collection": "star"
+			"url": "fullmoon_no9",
+			"description": "",
+			"alt_des": "",
+			"collection": "fullmoon"
 		},
 		{ 
 			
-			"url":"IMG_7280",
-			"description": "Fullmoon No:14 / 2017 / Acrylic On Canvas / 121x100 cm",
-			"alt_des": "Ersoy ALAP Fullmoon 14 Acrylic On Canvas / 121x100 cm",
-			"collection": "star"
+			"url": "fullmoon_no10",
+			"description": "147 x 103 cm",
+			"alt_des": "147 x 103 cm",
+			"collection": "fullmoon"
 		},
 		{ 
 			
-			"url":"IMG_7281",
-			"description": "Fullmoon No:01 / 2017 / Acrylic On Canvas / 177x146 cm",
-			"alt_des": "Ersoy ALAP Fullmoon 1 Acrylic On Canvas / 177x146 cm",
-			"collection": "galaxie"
+			"url": "fullmoon_no11",
+			"description": "108 x 91,5 cm",
+			"alt_des": "108 x 91,5 cm",
+			"collection": "fullmoon"
 		},
 		{ 
 			
-			"url":"IMG_7282",
-			"description": "Fullmoon No:04 / 2017 / Acrylic On Canvas / 177x146 cm",
-			"alt_des": "Ersoy ALAP Fullmoon 4 Acrylic On Canvas / 177x146 cm",
-			"collection": "galaxie"
+			"url": "fullmoon_no12",
+			"description": "102 x 84,5cm",
+			"alt_des": "102 x 84,5cm",
+			"collection": "fullmoon"
 		},
 		{ 
 			
-			"url":"IMG_7283",
-			"description": "Fullmoon No:03 / 2017 / Acrylic On Canvas / 139x107 cm",
-			"alt_des": "Ersoy ALAP Fullmoon 3 Acrylic On Canvas / 139x107 cm",
-			"collection": "galaxie"
+			"url": "fullmoon_no13",
+			"description": "102x86cm",
+			"alt_des": "102x86cm",
+			"collection": "fullmoon"
 		},
 		{ 
 			
-			"url":"IMG_7284",
-			"description": "Fullmoon No:14 / 2017 / Acrylic On Canvas / 121x100 cm",
-			"alt_des": "Ersoy ALAP Fullmoon 14 Acrylic On Canvas / 121x100 cm",
-			"collection": "galaxie"
-		},
-		{ 
-			
-			"url":"IMG_7285",
-			"description": "Fullmoon No:01 / 2017 / Acrylic On Canvas / 177x146 cm",
-			"alt_des": "Ersoy ALAP Fullmoon 1 Acrylic On Canvas / 177x146 cm",
-			"collection": "galaxie"
-		},
-		{ 
-			
-			"url":"IMG_7286",
-			"description": "Fullmoon No:04 / 2017 / Acrylic On Canvas / 177x146 cm",
-			"alt_des": "Ersoy ALAP Fullmoon 4 Acrylic On Canvas / 177x146 cm",
-			"collection": "galaxie"
+			"url": "fullmoon_no14",
+			"description": "104x85,5cm",
+			"alt_des": "104x85,5cm",
+			"collection": "fullmoon"
 		}
 	]
 }

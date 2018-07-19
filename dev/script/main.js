@@ -7,14 +7,14 @@ app.imageCreater = (classes = "img_box",url,description, alt_des, collection = "
 
     let markup = `
         <div class="${classes}">
-            <img class="img" alt="${alt_des}" src="assets/img/${url}.JPG"/>
+            <img class="img" alt="${alt_des}" src="assets/img/${url}.jpeg"/>
             <div class="detail_box"><p>${description}</p></div>
         </div> `
 
     $img_container.append(markup);            
 };
 
-app.imageRunner = (res, collection = "moon") => {
+app.imageRunner = (res, collection = "expression") => {
     res.forEach(painting => {
         if(painting.collection === collection){
             app.imageCreater(painting.classes, painting.url, painting.description);
@@ -49,6 +49,7 @@ app.events = () => {
     nav.forEach((button) => {
         button.addEventListener("click", function(){
             $img_container.empty();
+            $('html, body').animate({scrollLeft: 0}, 600);
             app.imageRunner(app.result, this.dataset.collection);
         })
     })
@@ -82,7 +83,6 @@ app.events = () => {
     $("#info svg").click(function() {
         if($(window).scrollLeft() + $(window).width() >= $(document).width() - 500 ){    
             $('html, body').animate({scrollLeft: 0}, 1000);
-            return false;
         }
     });
 

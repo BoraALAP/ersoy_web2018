@@ -150,14 +150,14 @@ body{
     &.enterence_short{
         height:10vh;
         @include MQ(M){
-            width: 160px;
+            width: 200px;
             height: 100vh;
             
             
         }
         .container{ 
             @include MQ(M){
-                
+                padding-right:20px;
             }
         }
         .name_title{  
@@ -373,15 +373,16 @@ body{
     
     .contact_about_section{
         display: grid;
-        margin: 10vh;
         transition-delay: 0.5s; 
         margin: 8vh 5vw;
         align-content:center;
-        grid-template-rows: auto;
-        grid-template-columns: 1fr 1fr;
-        grid-gap:2.5vw;
-        @include MQ(L){
-            
+        grid-template-rows: auto auto;
+        grid-template-columns: auto;
+        grid-gap:10vh;
+        @include MQ(M){
+            grid-template-rows: auto;
+            grid-template-columns: 1fr 1fr;
+            grid-gap:2.5vw;
         }
         .section{
             display: grid;
@@ -421,8 +422,10 @@ body{
     .page_container{
 
         &.img_load_animation{
-            width: 75vw;
-            transform: translate(25vw,0);
+            @include MQ(M){
+                width: 75vw;
+                transform: translate(25vw,0);
+            }
         }
 
 
@@ -451,6 +454,7 @@ body{
 
         nav{
             opacity:0;
+            display:grid;
             transition: all 0.7s $transition-load 0.5s;
             ul{
                 padding-left:0;
@@ -463,6 +467,9 @@ body{
                     @include MQ(M){
                         text-align: right;
                         padding: 2vh 1vw;
+                    }
+                    button{
+                        padding:0;
                     }
 
                     span{
@@ -496,6 +503,15 @@ body{
                         }
                     }
                 }
+            }
+
+            .divider{
+                width: 60px;
+                background-color:$black;
+                height:1px;
+                justify-self:end;
+                display:grid;
+                margin-right:10px;
             }
         }
     }
