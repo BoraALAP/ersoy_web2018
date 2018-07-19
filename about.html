@@ -58,17 +58,17 @@
 				</div>
 				<div class="contact_section section">
 					<h5>Fill the Form</h5>
-					<form action="mail.php" method="POST">
+					<form role="form" method="post" id="reused_form">
 						<div class="form_row">
-							<label for="full_name">Name:</label>
-							<input type="text" class="form-item form-input" id="full_name" aria-describedby="full_name" required="required" data-error="Please,write your name" name="name"> 
+							<label for="name">Name:</label>
+							<input type="text" class="form-item form-input" id="name" aria-describedby="full_name" required="required" data-error="Please,write your name" name="name"> 
 						</div>
 						<div class="form_row">
-							<label for="full_name">E-mail:</label>
-							<input type="email" class="form-item form-input" id="e-mail" aria-describedby="e-mail" required="required" data-error="Please,write your e-mail" name="email"> 
+							<label for="email">E-mail:</label>
+							<input type="email" class="form-item form-input" id="email" aria-describedby="e-mail" required="required" data-error="Please,write your e-mail" name="email"> 
 						</div>
 						<div class="form_row">
-							<label for="full_name">Message:</label>
+							<label for="message">Message:</label>
 							<textarea class="form-item form-textarea" id="message" aria-describedby="message" rows="1" required="required" data-error="Please,write your message." name="message"></textarea>
 						</div>
 						<div class="form_button">
