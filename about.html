@@ -11,8 +11,6 @@
 </head>
 <body  id="contact_about">
 
-
-
 <!-- Enterence Section -->
 
 	<section  class="enterence">
@@ -24,7 +22,15 @@
 			
 				
 			<div class="navigation">
-				<nav> 
+				<nav>
+					<ul>
+						<li>
+							<button data-collection="expression">Expression</button>
+						</li>
+						<li>
+							<button data-collection="fullmoon">Fullmoon</button>
+						</li>
+					</ul>
 					<ul>
 						<li>
 							<a href="/#description" id="description-btn">Description</a>
@@ -52,18 +58,18 @@
 				</div>
 				<div class="contact_section section">
 					<h5>Fill the Form</h5>
-					<form>
+					<form action="mail.php" method="POST">
 						<div class="form_row">
 							<label for="full_name">Name:</label>
-							<input type="text" class="form-item form-input" id="full_name" aria-describedby="full_name" required="required" data-error="Please,write your name"> 
+							<input type="text" class="form-item form-input" id="full_name" aria-describedby="full_name" required="required" data-error="Please,write your name" name="name"> 
 						</div>
 						<div class="form_row">
 							<label for="full_name">E-mail:</label>
-							<input type="email" class="form-item form-input" id="e-mail" aria-describedby="e-mail" required="required" data-error="Please,write your e-mail"> 
+							<input type="email" class="form-item form-input" id="e-mail" aria-describedby="e-mail" required="required" data-error="Please,write your e-mail" name="email"> 
 						</div>
 						<div class="form_row">
 							<label for="full_name">Message:</label>
-							<textarea class="form-item form-textarea" id="message" aria-describedby="message" rows="1" required="required" data-error="Please,write your message."></textarea>
+							<textarea class="form-item form-textarea" id="message" aria-describedby="message" rows="1" required="required" data-error="Please,write your message." name="message"></textarea>
 						</div>
 						<div class="form_button">
 							<button class="btn" type="submit" value="Submit"><p>Submit</p><span> </span></button>
@@ -72,16 +78,15 @@
 					<div class="divider">
 					</div>
 					<div class="extra_information">
-						<div class="information_containers">
-							<div class="extra_title"><h6>Phone:</h6></div>
-							<div class="extra_text"><p>+90 532 456 16 87</p></div>
-						</div>
+
 						<div class="information_containers">
 							<div class="extra_title"><h6>Studio Address:</h6></div>
-							<div class="extra_text"><p>Gümüşsuyu Mahallesi,</br> 
-													Sıraselviler Cad. No:7, </br>
-													34435 Beyoğlu / Istanbul, </br>
-													Turkey</p></div>
+							<div class="extra_text"><p><strong>ATÖLYE İSTANBUL</strong></br> 
+														SULTAN SELİM MAH. YAMAÇ SOK. </br>
+														NO:12 KAT:3 4 LEVENT KAĞITHANE</p>
+
+													<p><strong>ATÖLYE DATÇA</strong> </br>MESUDİYE MAH. OVABÜKÜ SOK. </br>81/2 DATÇA MUĞLA</p>
+
 						</div>
 					</div>
 				</div> 

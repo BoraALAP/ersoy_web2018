@@ -84,39 +84,6 @@ body{
         }
     }
 
-    .social_icons{
-        transition: all 0.7s $transition-load 3.2s;
-        transform: translate(0, 20px);
-        opacity: 0;
-        display: grid;
-        align-items: center;
-        margin-top: 5vh; 
-        a{
-            width: 40px; 
-            height: 40px;
-            display: inline-block;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: 30px;
-            transition: box-shadow 0.5s $transition-load; 
-            &:hover{
-                box-shadow: inset 0px 0px 0px 1px #FFFFFF;  
-            }
-            &:first-child{
-                background-image:url('../img/facebook.svg'); 
-            }
-            &:nth-child(2){
-                background-image:url('../img/twitter.svg');
-            }
-            &:nth-child(3){
-                background-image:url('../img/instagram.svg');
-            } 
-            &:nth-child(4){
-                background-image:url('../img/linkedin.svg'); 
-            }
-        }
-    }
-
 
     &.enterence_open{
         
@@ -295,6 +262,7 @@ body{
             grid-template-columns: auto;
             grid-template-rows: auto auto;
             justify-content: end;
+            align-content: start;
             margin: 5vh 5vw 5vh 5vw;
             @include MQ(M){
                 margin: 15vh 10vw 15vh 0;
