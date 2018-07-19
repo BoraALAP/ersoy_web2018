@@ -50,11 +50,12 @@ app.events = () => {
         button.addEventListener("click", function(){
             $img_container.empty();
             $('html, body').animate({scrollLeft: 0}, 600);
-            if(window.location.pathname === "/"){
-                app.imageRunner(app.result, this.dataset.collection);
-            } else {
+            if(window.location.pathname === "../about.html"){
                 app.imageRunner(app.result, this.dataset.collection);
                 window.location.href = "/";
+            } else {
+                app.imageRunner(app.result, this.dataset.collection);
+                
             }
 
         })
